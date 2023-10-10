@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-'''Module for 3-tasks.py
+'''Task 3's module.
 '''
 import asyncio
 

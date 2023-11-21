@@ -8,7 +8,7 @@ const DB_FILE = process.argv.length > 2 ? process.argv[2] : '';
 /**
  * Counts the students in a CSV data file.
  * @param {String} dataPath The path to the CSV data file.
- * @author Oluwashola Rahmon <https://github.com/raymedi>
+ * @author Christian Maximilian <https://github.com/KrystianMaccs>
  */
 const countStudents = (dataPath) => new Promise((resolve, reject) => {
   if (!dataPath) {
@@ -81,10 +81,10 @@ app.get('/students', (_, res) => {
     })
     .catch((err) => {
       responseParts.push(err instanceof Error ? err.message : err.toString());
-OAOAOAOAOAOA      const responseText = responseParts.join('\n');
-OAOAOAOAOAOAOAOAOA      res.setHeader('Content-Type', 'text/plain');
-OAOAOA      res.setHeader('Content-Length', responseText.length);
-OAOAOA      res.statusCode = 200;
+      const responseText = responseParts.join('\n');
+      res.setHeader('Content-Type', 'text/plain');
+      res.setHeader('Content-Length', responseText.length);
+      res.statusCode = 200;
       res.write(Buffer.from(responseText));
     });
 });
